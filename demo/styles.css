@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 700px;
+	padding: 40px;
+	margin: 0 auto;
+}
+
+.col {
+	float: left;
+	padding: 15px;
+	width: 33.333%;
+	position: relative;
+	padding-bottom: 50px;
+}
+
+.button {
+	width: 100%;
+	padding: 12px 24px;
+	background: cornflowerblue;
+	color: white;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+}
