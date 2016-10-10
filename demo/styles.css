@@ -31,3 +31,22 @@
 	max-width: 100%;
 	height: auto;
 }
+
+.clear {
+	margin: 20px 0;
+	clear: both;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+.clearfix {
+    display: block;
+}

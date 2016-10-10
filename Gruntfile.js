@@ -12,7 +12,8 @@ module.exports = function( grunt ) {
 				" *  <%= pkg.description %>\n" +
 				" *  <%= pkg.homepage %>\n" +
 				" *\n" +
-				" *  Made by <%= pkg.author.name %>\n" +
+				" *  Author <%= pkg.author.name %>\n" +
+				" *  Website <%= pkg.author.url %>\n" +
 				" *  Under <%= pkg.license %> License\n" +
 				" */\n"
 		},
@@ -22,35 +23,34 @@ module.exports = function( grunt ) {
 				banner: "<%= meta.banner %>"
 			},
 			dist: {
-				src: [ "src/jquery.boilerplate.js" ],
-				dest: "dist/jquery.boilerplate.js"
+				src: [ "src/jquery.col-same-height.js" ],
+				dest: "dist/jquery.col-same-height.js"
 			}
 		},
 
 		uglify: {
 			dist: {
-				src: [ "dist/jquery.boilerplate.js" ],
-				dest: "dist/jquery.boilerplate.min.js"
+				src: [ "src/jquery.col-same-height.js" ],
+				dest: "dist/jquery.col-same-height.min.js"
 			},
 			options: {
 				banner: "<%= meta.banner %>"
 			}
 		},
-
+		jshint: {
+			all: ["src/jquery.col-same-height.js"]
+		},
 		watch: {
-			files: [ "src/*", "test/**/*" ],
-			tasks: [ "default" ]
+			files: [ "src/*.js" ],
+			tasks: [ "build" ]
 		}
 
 	} );
 
 	grunt.loadNpmTasks( "grunt-contrib-concat" );
 	grunt.loadNpmTasks( "grunt-contrib-jshint" );
-	grunt.loadNpmTasks( "grunt-jscs" );
 	grunt.loadNpmTasks( "grunt-contrib-uglify" );
-	grunt.loadNpmTasks( "grunt-contrib-coffee" );
 	grunt.loadNpmTasks( "grunt-contrib-watch" );
-	grunt.loadNpmTasks( "grunt-karma" );
 
 	grunt.registerTask( "build", [ "jshint", "concat", "uglify" ] );
 };

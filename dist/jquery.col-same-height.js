@@ -1,3 +1,12 @@
+/*
+ *  col-same-height - v1.0.0
+ *  A jQuery plugin to keep columns at the same height
+ *  
+ *
+ *  Author Joseph McMurray (pixel programmer)
+ *  Website http://pixelprogrammer.net
+ *  Under ISC License
+ */
 (function($) {
 
 	var settings = null;

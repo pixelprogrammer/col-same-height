@@ -5,11 +5,10 @@
 </head>
 <link rel="stylesheet" type="text/css" href="styles.css">
 <body>
-	<div class="container">
+	<div class="container clearfix">
 		<div class="col col-same-height">
 			<h1>Text</h1>
 			<p>this is just going to have a little bit of text</p>
-			<img src="http://img08.deviantart.net/c3f4/i/2012/308/6/7/super_metroid_by_thiago_almeida-d5jz8cg.jpg" class="img-responsive">
 			<a class="button">A Button</a>
 		</div>
 		<div class="col col-same-height">
@@ -24,6 +23,31 @@
 			<a class="button">A Button</a>
 		</div>
 		<div class="col col-same-height" data-col-break="lg">
+			<h1>Last column</h1>
+			<p>this will also have a little bit of text</p>
+			<a class="button">A Button</a>
+		</div>
+	</div>
+
+	<hr class="clear">
+
+	<div class="container clearfix">
+		<div class="col col-same-height" data-col-group="img">
+			<h1>Text</h1>
+			<p>this is just going to have a little bit of text but the image should make the height larger</p>
+			<img src="http://img08.deviantart.net/c3f4/i/2012/308/6/7/super_metroid_by_thiago_almeida-d5jz8cg.jpg" class="img-responsive">
+
+			<a class="button">A Button</a>
+		</div>
+		<div class="col col-same-height" data-col-group="img">
+
+			<h1>Some text</h1>
+			<p>When the page loads this column should be the tallest. However, the left column has an image which will need to be loaded. This will then force a refresh of the column sizes after it loads making the left column taller and the rest the same size.
+			</p>
+
+			<a class="button">A Button</a>
+		</div>
+		<div class="col col-same-height" data-col-group="img">
 			<h1>Last column</h1>
 			<p>this will also have a little bit of text</p>
 			<a class="button">A Button</a>

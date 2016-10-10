@@ -11,7 +11,10 @@
     "height",
     "jquery"
   ],
-  "author": "Joseph McMurray (pixel programmer)",
+  "author": {
+    "name": "Joseph McMurray (pixel programmer)",
+    "url": "http://pixelprogrammer.net"
+  },
   "license": "ISC",
   "devDependencies": {
     "grunt": "^1.0.1",
